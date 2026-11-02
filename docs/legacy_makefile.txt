@@ -1,0 +1,56 @@
+target: barbie zbs zbs_v2 zbs_v3 zbs_v2_mpi zbs_v3_mpi zbs_fast zbs_fast_mpi wrapid generate_field generate_fields calpow_mom clean tidy 
+
+LD_LIBRARY_PATH=/path_to_FFTW/Library/
+export LD_LIBRARY_PATH
+
+CC1=gcc
+CC2=mpicc
+CFLAGS=-g
+
+FFTW_LIB= -L//path_to_FFTW/Library/lib/
+GSL_LIB= -L//path_to_GSL/Library/lib/
+
+FFTW_INCLUDE= -I/path_to_FFTW/Library/include/
+GSL_INCLUDE= -I/path_to_GSL/Library/include/
+
+barbie:  barbie.c funcs.c 
+	$(CC1) $(CFLAGS) $(FFTW_INCLUDE) $(GSL_INCLUDE) barbie.c funcs.c -fopenmp -lm $(FFTW_LIB) -lfftw3 -lfftw3_omp $(GSL_LIB) -lgsl -lgslcblas -o barbie
+
+
+zbs:  zBS.c funcs.c 
+	$(CC1) $(CFLAGS) $(FFTW_INCLUDE) $(GSL_INCLUDE) zBS.c funcs.c -fopenmp -lm $(FFTW_LIB) -lfftw3 -lfftw3_omp $(GSL_LIB) -lgsl -lgslcblas -o zbs
+	
+zbs_v2:  zBS_v2.c funcs.c 
+	$(CC1) $(CFLAGS) $(FFTW_INCLUDE) $(GSL_INCLUDE) zBS_v2.c funcs.c -fopenmp -lm $(FFTW_LIB) -lfftw3 -lfftw3_omp $(GSL_LIB) -lgsl -lgslcblas -o zbs_v2
+
+zbs_v3:  zBS_v3.c funcs.c 
+	$(CC1) $(CFLAGS) $(FFTW_INCLUDE) $(GSL_INCLUDE) zBS_v3.c funcs.c -fopenmp -lm $(FFTW_LIB) -lfftw3 -lfftw3_omp $(GSL_LIB) -lgsl -lgslcblas -o zbs_v3
+
+wrapid:  wrapid.c funcs.c 
+	$(CC1) $(CFLAGS) $(FFTW_INCLUDE) $(GSL_INCLUDE) wrapid.c funcs.c -fopenmp -lm $(FFTW_LIB) -lfftw3 -lfftw3_omp $(GSL_LIB) -lgsl -lgslcblas -o wrapid
+
+zbs_v2_mpi:  zBS_v2_mpi.c funcs.c 
+	$(CC2) $(CFLAGS) $(FFTW_INCLUDE) $(GSL_INCLUDE) zBS_v2_mpi.c funcs.c -fopenmp -lm $(FFTW_LIB) -lfftw3 -lfftw3_omp $(GSL_LIB) -lgsl -lgslcblas -o zbs_v2_mpi
+
+zbs_v3_mpi:  zBS_v3_mpi.c funcs.c 
+	$(CC2) $(CFLAGS) $(FFTW_INCLUDE) $(GSL_INCLUDE) zBS_v3_mpi.c funcs.c -fopenmp -lm $(FFTW_LIB) -lfftw3 -lfftw3_omp $(GSL_LIB) -lgsl -lgslcblas -o zbs_v3_mpi
+
+zbs_fast:  zBS_fast.c funcs.c 
+	$(CC1) $(CFLAGS) $(FFTW_INCLUDE) $(GSL_INCLUDE) zBS_fast.c funcs.c -fopenmp -lm $(FFTW_LIB) -lfftw3 -lfftw3_omp $(GSL_LIB) -lgsl -lgslcblas -o zbs_fast
+	
+zbs_fast_mpi:  zBS_fast_mpi.c funcs.c 
+	$(CC2) $(CFLAGS) $(FFTW_INCLUDE) $(GSL_INCLUDE) zBS_fast_mpi.c funcs.c -fopenmp -lm $(FFTW_LIB) -lfftw3 -lfftw3_omp $(GSL_LIB) -lgsl -lgslcblas -o zbs_fast_mpi
+	
+generate_field: generate_field.c ngrf_2d_funcs.c
+	$(CC1) $(CFLAGS) $(FFTW_INCLUDE) $(GSL_INCLUDE) generate_field.c ngrf_2d_funcs.c -fopenmp -lm $(FFTW_LIB) -lfftw3 -lfftw3_omp $(GSL_LIB) -lgsl -lgslcblas -o field
+	
+generate_fields: generate_fields.c ngrf_2d_funcs.c
+	$(CC1) $(CFLAGS) $(FFTW_INCLUDE) $(GSL_INCLUDE) generate_fields.c ngrf_2d_funcs.c -fopenmp -lm $(FFTW_LIB) -lfftw3 -lfftw3_omp $(GSL_LIB) -lgsl -lgslcblas -o fields
+
+calpow_mom:  calpow_mom.c funcs.c 
+	$(CC1) $(CFLAGS) $(FFTW_INCLUDE) $(GSL_INCLUDE) calpow_mom.c funcs.c -fopenmp -lm $(FFTW_LIB) -lfftw3 -lfftw3_omp $(GSL_LIB) -lgsl -lgslcblas -o calpow_mom
+
+clean:
+	rm -rf modes psout* bsout* masked_*
+tidy:
+	rm -rf masked_*

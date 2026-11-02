@@ -1,0 +1,3 @@
+./barbie 256 1 51 1 1
+
+executable NN realization UL_k1(Nmax) LL_k1(Nmin) Bin_Width

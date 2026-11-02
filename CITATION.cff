@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "Please cite the associated paper when using this research code."
+type: software
+title: "BARBIE: Brisk estimation of redshift-space bispectrum multipoles"
+authors:
+  - family-names: Gill
+    given-names: Sukhdeep Singh
+preferred-citation:
+  type: article
+  title: "Brisk estimator for the angular multipoles of the redshift space bispectrum"
+  authors:
+    - family-names: Gill
+      given-names: Sukhdeep Singh
+    - family-names: Bharadwaj
+      given-names: Somnath
+  doi: "10.1103/PhysRevD.111.043507"
+  url: "https://arxiv.org/abs/2405.14513"

@@ -1,0 +1,349 @@
+gcc -I<LOCAL_DEPENDENCY_PREFIX>/include -O2 -std=gnu11 -Wall -Wextra -fopenmp barbie.c funcs.c -L<LOCAL_DEPENDENCY_PREFIX>/lib/x86_64-linux-gnu -Wl,-rpath,<LOCAL_DEPENDENCY_PREFIX>/lib/x86_64-linux-gnu -lfftw3_omp -lfftw3 -lgsl -lgslcblas -lm -o barbie
+barbie.c: In function ‘main’:
+barbie.c:232:26: warning: unused variable ‘p3_max’ [-Wunused-variable]
+  232 | int p2_min,p2_max,p3_min,p3_max;
+      |                          ^~~~~~
+barbie.c:232:19: warning: unused variable ‘p3_min’ [-Wunused-variable]
+  232 | int p2_min,p2_max,p3_min,p3_max;
+      |                   ^~~~~~
+barbie.c:187:23: warning: variable ‘comp_ro’ set but not used [-Wunused-but-set-variable]
+  187 |         fftw_complex *comp_ro;
+      |                       ^~~~~~~
+barbie.c:55:34: warning: unused variable ‘file3’ [-Wunused-variable]
+   55 |     char file1[128], file2[128], file3[128],file13[128], file_calcR[128],file_wrapid[128];
+      |                                  ^~~~~
+barbie.c:54:27: warning: unused variable ‘fp3’ [-Wunused-variable]
+   54 |         FILE *fp1, *fp2, *fp3,*fp13;
+      |                           ^~~
+barbie.c:53:49: warning: unused variable ‘dummy2’ [-Wunused-variable]
+   53 |         double kk,dk_perp,time,start_time,dummy,dummy2;
+      |                                                 ^~~~~~
+barbie.c:53:43: warning: unused variable ‘dummy’ [-Wunused-variable]
+   53 |         double kk,dk_perp,time,start_time,dummy,dummy2;
+      |                                           ^~~~~
+barbie.c:53:19: warning: variable ‘dk_perp’ set but not used [-Wunused-but-set-variable]
+   53 |         double kk,dk_perp,time,start_time,dummy,dummy2;
+      |                   ^~~~~~~
+barbie.c:51:38: warning: unused variable ‘mu’ [-Wunused-variable]
+   51 |         double Bispec_real, Num, tt, mu, Bispec_imag, Biana;
+      |                                      ^~
+barbie.c:51:34: warning: unused variable ‘tt’ [-Wunused-variable]
+   51 |         double Bispec_real, Num, tt, mu, Bispec_imag, Biana;
+      |                                  ^~
+barbie.c:50:48: warning: unused variable ‘emm’ [-Wunused-variable]
+   50 |         int K1_bin, T_bin, MU_bin, NB=10, ell, emm,LL_k1,UL_k1,BW_k1;
+      |                                                ^~~
+barbie.c:50:43: warning: unused variable ‘ell’ [-Wunused-variable]
+   50 |         int K1_bin, T_bin, MU_bin, NB=10, ell, emm,LL_k1,UL_k1,BW_k1;
+      |                                           ^~~
+barbie.c:50:36: warning: unused variable ‘NB’ [-Wunused-variable]
+   50 |         int K1_bin, T_bin, MU_bin, NB=10, ell, emm,LL_k1,UL_k1,BW_k1;
+      |                                    ^~
+barbie.c:49:77: warning: variable ‘loop_id’ set but not used [-Wunused-but-set-variable]
+   49 |         int r,i,j,k,l,ia,ja,ii,jj,r1,r2,r3,p1,p2,p3,rp,sign_2,sign_3,index, loop_id=0;
+      |                                                                             ^~~~~~~
+barbie.c:32:50: warning: unused variable ‘norm_fact’ [-Wunused-variable]
+   32 |         double dK, K1, T, MU, swap, px, pz, Ylm, norm_fact,mu_1,mu_2,mu_3,ff,beta;
+      |                                                  ^~~~~~~~~
+barbie.c:32:45: warning: unused variable ‘Ylm’ [-Wunused-variable]
+   32 |         double dK, K1, T, MU, swap, px, pz, Ylm, norm_fact,mu_1,mu_2,mu_3,ff,beta;
+      |                                             ^~~
+barbie.c:32:31: warning: unused variable ‘swap’ [-Wunused-variable]
+   32 |         double dK, K1, T, MU, swap, px, pz, Ylm, norm_fact,mu_1,mu_2,mu_3,ff,beta;
+      |                               ^~~~
+barbie.c:32:16: warning: unused variable ‘dK’ [-Wunused-variable]
+   32 |         double dK, K1, T, MU, swap, px, pz, Ylm, norm_fact,mu_1,mu_2,mu_3,ff,beta;
+      |                ^~
+barbie.c:183:17: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  183 |                 fread(&ro[i][j][k],sizeof(double),1,fp1); }
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+barbie.c:276:5: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  276 |     fread(buffer1, sizeof(double), 2 * NN*NN, drfile1);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+barbie.c:320:17: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  320 |                 fread(buffer2, sizeof(double), 2 * NN*NN, drfile2);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+barbie.c:321:17: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  321 |                 fread(buffer3, sizeof(double), 2 * NN*NN, drfile3);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+funcs.c: In function ‘read_field’:
+funcs.c:271:17: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  271 |                 fread(&ro[i][j][k],sizeof(double),1,fp1); }
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+funcs.c: In function ‘fill_sd’:
+funcs.c:290:5: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  290 |     fread(buffer1, sizeof(double), 2 * NN*NN, drfile1);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+funcs.c: In function ‘read_rings’:
+funcs.c:436:1: warning: ignoring return value of ‘fscanf’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  436 | fscanf(file_count, "%d", rcountPtr);
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+funcs.c:449:1: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  449 | fread(*rdataPtr + i * 4 + j, sizeof(double), 1, rfile);}}
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+funcs.c: In function ‘FBI’:
+funcs.c:597:25: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  597 |                         fread(&dummy_data, sizeof(double), 2, drfile1);
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+funcs.c:602:25: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  602 |                         fread(&dummy_data, sizeof(double), 2, drfile2);
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+funcs.c:607:25: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  607 |                         fread(&dummy_data, sizeof(double), 2, drfile3);
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+funcs.c: In function ‘FBI_fast’:
+funcs.c:660:17: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  660 |                 fread(buffer1, sizeof(double), 2 * NN*NN, drfile1);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+funcs.c:661:17: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  661 |                 fread(buffer2, sizeof(double), 2 * NN*NN, drfile2);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+funcs.c:662:17: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  662 |                 fread(buffer3, sizeof(double), 2 * NN*NN, drfile3);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+funcs.c: In function ‘FBI_fast_old’:
+funcs.c:813:17: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  813 |                 fread(buffer1, sizeof(double), 2 * NN*NN, drfile1);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+funcs.c:814:17: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  814 |                 fread(buffer2, sizeof(double), 2 * NN*NN, drfile2);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+funcs.c:815:17: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  815 |                 fread(buffer3, sizeof(double), 2 * NN*NN, drfile3);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -I<LOCAL_DEPENDENCY_PREFIX>/include -O2 -std=gnu11 -Wall -Wextra -fopenmp generate_field.c ngrf_2d_funcs.c -L<LOCAL_DEPENDENCY_PREFIX>/lib/x86_64-linux-gnu -Wl,-rpath,<LOCAL_DEPENDENCY_PREFIX>/lib/x86_64-linux-gnu -lfftw3_omp -lfftw3 -lgsl -lgslcblas -lm -o field
+generate_field.c: In function ‘main’:
+generate_field.c:90:17: warning: variable ‘comp_ro’ set but not used [-Wunused-but-set-variable]
+   90 |   fftw_complex *comp_ro;
+      |                 ^~~~~~~
+generate_field.c:30:27: warning: variable ‘F_RSD’ set but not used [-Wunused-but-set-variable]
+   30 |         int r,i,j,k,index,F_RSD,NRi;
+      |                           ^~~~~
+generate_field.c:30:21: warning: unused variable ‘index’ [-Wunused-variable]
+   30 |         int r,i,j,k,index,F_RSD,NRi;
+      |                     ^~~~~
+generate_field.c:30:13: warning: unused variable ‘r’ [-Wunused-variable]
+   30 |         int r,i,j,k,index,F_RSD,NRi;
+      |             ^
+ngrf_2d_funcs.c: In function ‘power_spec’:
+ngrf_2d_funcs.c:169:28: warning: unused variable ‘c1’ [-Wunused-variable]
+  169 |   long index,index1,index2,c1=0;
+      |                            ^~
+ngrf_2d_funcs.c:168:26: warning: unused variable ‘fac’ [-Wunused-variable]
+  168 |   double fac1,fac2,fac3, fac, m, scale;
+      |                          ^~~
+ngrf_2d_funcs.c: In function ‘Get_Modes’:
+ngrf_2d_funcs.c:542:5: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+  542 |     for(j=0;j<N2;j++)
+      |     ^~~
+ngrf_2d_funcs.c:547:7: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  547 |       fftw_execute(p_ro);  // ro now contains Delta(k)
+      |       ^~~~~~~~~~~~
+ngrf_2d_funcs.c: In function ‘Get_Modes_2D’:
+ngrf_2d_funcs.c:688:11: warning: unused variable ‘index’ [-Wunused-variable]
+  688 |   int i,j,index;
+      |           ^~~~~
+ngrf_2d_funcs.c: In function ‘Non_Gauss_2D’:
+ngrf_2d_funcs.c:704:11: warning: unused variable ‘index’ [-Wunused-variable]
+  704 |   int i,j,index;
+      |           ^~~~~
+gcc -I<LOCAL_DEPENDENCY_PREFIX>/include -O2 -std=gnu11 -Wall -Wextra -fopenmp calpow_mom.c funcs.c -L<LOCAL_DEPENDENCY_PREFIX>/lib/x86_64-linux-gnu -Wl,-rpath,<LOCAL_DEPENDENCY_PREFIX>/lib/x86_64-linux-gnu -lfftw3_omp -lfftw3 -lgsl -lgslcblas -lm -o calpow_mom
+calpow_mom.c: In function ‘main’:
+calpow_mom.c:91:11: warning: variable ‘powerk’ set but not used [-Wunused-but-set-variable]
+   91 |   double *powerk;
+      |           ^~~~~~
+calpow_mom.c:81:23: warning: variable ‘comp_ro’ set but not used [-Wunused-but-set-variable]
+   81 |         fftw_complex *comp_ro;
+      |                       ^~~~~~~
+calpow_mom.c:41:22: warning: unused variable ‘file2’ [-Wunused-variable]
+   41 |     char file1[128], file2[128], file3[128];
+      |                      ^~~~~
+calpow_mom.c:40:32: warning: unused variable ‘fp13’ [-Wunused-variable]
+   40 |         FILE *fp1, *fp2, *fp3,*fp13;
+      |                                ^~~~
+calpow_mom.c:40:21: warning: unused variable ‘fp2’ [-Wunused-variable]
+   40 |         FILE *fp1, *fp2, *fp3,*fp13;
+      |                     ^~~
+calpow_mom.c:39:49: warning: unused variable ‘dummy2’ [-Wunused-variable]
+   39 |         double kk,dk_perp,time,start_time,dummy,dummy2;
+      |                                                 ^~~~~~
+calpow_mom.c:39:43: warning: unused variable ‘dummy’ [-Wunused-variable]
+   39 |         double kk,dk_perp,time,start_time,dummy,dummy2;
+      |                                           ^~~~~
+calpow_mom.c:39:32: warning: variable ‘start_time’ set but not used [-Wunused-but-set-variable]
+   39 |         double kk,dk_perp,time,start_time,dummy,dummy2;
+      |                                ^~~~~~~~~~
+calpow_mom.c:39:27: warning: unused variable ‘time’ [-Wunused-variable]
+   39 |         double kk,dk_perp,time,start_time,dummy,dummy2;
+      |                           ^~~~
+calpow_mom.c:39:19: warning: unused variable ‘dk_perp’ [-Wunused-variable]
+   39 |         double kk,dk_perp,time,start_time,dummy,dummy2;
+      |                   ^~~~~~~
+calpow_mom.c:39:16: warning: unused variable ‘kk’ [-Wunused-variable]
+   39 |         double kk,dk_perp,time,start_time,dummy,dummy2;
+      |                ^~
+calpow_mom.c:36:57: warning: unused variable ‘BW_k1’ [-Wunused-variable]
+   36 |         int K1_bin, T_bin, MU_bin, ell, emm,LL_k1,UL_k1,BW_k1;
+      |                                                         ^~~~~
+calpow_mom.c:36:51: warning: unused variable ‘UL_k1’ [-Wunused-variable]
+   36 |         int K1_bin, T_bin, MU_bin, ell, emm,LL_k1,UL_k1,BW_k1;
+      |                                                   ^~~~~
+calpow_mom.c:36:45: warning: unused variable ‘LL_k1’ [-Wunused-variable]
+   36 |         int K1_bin, T_bin, MU_bin, ell, emm,LL_k1,UL_k1,BW_k1;
+      |                                             ^~~~~
+calpow_mom.c:36:41: warning: unused variable ‘emm’ [-Wunused-variable]
+   36 |         int K1_bin, T_bin, MU_bin, ell, emm,LL_k1,UL_k1,BW_k1;
+      |                                         ^~~
+calpow_mom.c:36:36: warning: unused variable ‘ell’ [-Wunused-variable]
+   36 |         int K1_bin, T_bin, MU_bin, ell, emm,LL_k1,UL_k1,BW_k1;
+      |                                    ^~~
+calpow_mom.c:36:28: warning: unused variable ‘MU_bin’ [-Wunused-variable]
+   36 |         int K1_bin, T_bin, MU_bin, ell, emm,LL_k1,UL_k1,BW_k1;
+      |                            ^~~~~~
+calpow_mom.c:36:21: warning: unused variable ‘T_bin’ [-Wunused-variable]
+   36 |         int K1_bin, T_bin, MU_bin, ell, emm,LL_k1,UL_k1,BW_k1;
+      |                     ^~~~~
+calpow_mom.c:36:13: warning: unused variable ‘K1_bin’ [-Wunused-variable]
+   36 |         int K1_bin, T_bin, MU_bin, ell, emm,LL_k1,UL_k1,BW_k1;
+      |             ^~~~~~
+calpow_mom.c:35:77: warning: unused variable ‘loop_id’ [-Wunused-variable]
+   35 |         int r,i,j,k,l,ia,ja,ii,jj,r1,r2,r3,p1,p2,p3,rp,sign_2,sign_3,index, loop_id=0;
+      |                                                                             ^~~~~~~
+calpow_mom.c:35:70: warning: unused variable ‘index’ [-Wunused-variable]
+   35 |         int r,i,j,k,l,ia,ja,ii,jj,r1,r2,r3,p1,p2,p3,rp,sign_2,sign_3,index, loop_id=0;
+      |                                                                      ^~~~~
+calpow_mom.c:35:63: warning: unused variable ‘sign_3’ [-Wunused-variable]
+   35 |         int r,i,j,k,l,ia,ja,ii,jj,r1,r2,r3,p1,p2,p3,rp,sign_2,sign_3,index, loop_id=0;
+      |                                                               ^~~~~~
+calpow_mom.c:35:56: warning: unused variable ‘sign_2’ [-Wunused-variable]
+   35 |         int r,i,j,k,l,ia,ja,ii,jj,r1,r2,r3,p1,p2,p3,rp,sign_2,sign_3,index, loop_id=0;
+      |                                                        ^~~~~~
+calpow_mom.c:35:53: warning: unused variable ‘rp’ [-Wunused-variable]
+   35 |         int r,i,j,k,l,ia,ja,ii,jj,r1,r2,r3,p1,p2,p3,rp,sign_2,sign_3,index, loop_id=0;
+      |                                                     ^~
+calpow_mom.c:35:50: warning: unused variable ‘p3’ [-Wunused-variable]
+   35 |         int r,i,j,k,l,ia,ja,ii,jj,r1,r2,r3,p1,p2,p3,rp,sign_2,sign_3,index, loop_id=0;
+      |                                                  ^~
+calpow_mom.c:35:47: warning: unused variable ‘p2’ [-Wunused-variable]
+   35 |         int r,i,j,k,l,ia,ja,ii,jj,r1,r2,r3,p1,p2,p3,rp,sign_2,sign_3,index, loop_id=0;
+      |                                               ^~
+calpow_mom.c:35:44: warning: unused variable ‘p1’ [-Wunused-variable]
+   35 |         int r,i,j,k,l,ia,ja,ii,jj,r1,r2,r3,p1,p2,p3,rp,sign_2,sign_3,index, loop_id=0;
+      |                                            ^~
+calpow_mom.c:35:41: warning: unused variable ‘r3’ [-Wunused-variable]
+   35 |         int r,i,j,k,l,ia,ja,ii,jj,r1,r2,r3,p1,p2,p3,rp,sign_2,sign_3,index, loop_id=0;
+      |                                         ^~
+calpow_mom.c:35:38: warning: unused variable ‘r2’ [-Wunused-variable]
+   35 |         int r,i,j,k,l,ia,ja,ii,jj,r1,r2,r3,p1,p2,p3,rp,sign_2,sign_3,index, loop_id=0;
+      |                                      ^~
+calpow_mom.c:35:35: warning: unused variable ‘r1’ [-Wunused-variable]
+   35 |         int r,i,j,k,l,ia,ja,ii,jj,r1,r2,r3,p1,p2,p3,rp,sign_2,sign_3,index, loop_id=0;
+      |                                   ^~
+calpow_mom.c:35:32: warning: unused variable ‘jj’ [-Wunused-variable]
+   35 |         int r,i,j,k,l,ia,ja,ii,jj,r1,r2,r3,p1,p2,p3,rp,sign_2,sign_3,index, loop_id=0;
+      |                                ^~
+calpow_mom.c:35:29: warning: unused variable ‘ii’ [-Wunused-variable]
+   35 |         int r,i,j,k,l,ia,ja,ii,jj,r1,r2,r3,p1,p2,p3,rp,sign_2,sign_3,index, loop_id=0;
+      |                             ^~
+calpow_mom.c:35:26: warning: unused variable ‘ja’ [-Wunused-variable]
+   35 |         int r,i,j,k,l,ia,ja,ii,jj,r1,r2,r3,p1,p2,p3,rp,sign_2,sign_3,index, loop_id=0;
+      |                          ^~
+calpow_mom.c:35:23: warning: unused variable ‘ia’ [-Wunused-variable]
+   35 |         int r,i,j,k,l,ia,ja,ii,jj,r1,r2,r3,p1,p2,p3,rp,sign_2,sign_3,index, loop_id=0;
+      |                       ^~
+calpow_mom.c:35:21: warning: unused variable ‘l’ [-Wunused-variable]
+   35 |         int r,i,j,k,l,ia,ja,ii,jj,r1,r2,r3,p1,p2,p3,rp,sign_2,sign_3,index, loop_id=0;
+      |                     ^
+calpow_mom.c:35:13: warning: unused variable ‘r’ [-Wunused-variable]
+   35 |         int r,i,j,k,l,ia,ja,ii,jj,r1,r2,r3,p1,p2,p3,rp,sign_2,sign_3,index, loop_id=0;
+      |             ^
+calpow_mom.c:28:78: warning: variable ‘beta’ set but not used [-Wunused-but-set-variable]
+   28 |         double dK, K1, T, MU, swap, px, pz, Ylm, norm_fact,mu_1,mu_2,mu_3,ff,beta;
+      |                                                                              ^~~~
+calpow_mom.c:28:75: warning: variable ‘ff’ set but not used [-Wunused-but-set-variable]
+   28 |         double dK, K1, T, MU, swap, px, pz, Ylm, norm_fact,mu_1,mu_2,mu_3,ff,beta;
+      |                                                                           ^~
+calpow_mom.c:28:70: warning: unused variable ‘mu_3’ [-Wunused-variable]
+   28 |         double dK, K1, T, MU, swap, px, pz, Ylm, norm_fact,mu_1,mu_2,mu_3,ff,beta;
+      |                                                                      ^~~~
+calpow_mom.c:28:65: warning: unused variable ‘mu_2’ [-Wunused-variable]
+   28 |         double dK, K1, T, MU, swap, px, pz, Ylm, norm_fact,mu_1,mu_2,mu_3,ff,beta;
+      |                                                                 ^~~~
+calpow_mom.c:28:60: warning: unused variable ‘mu_1’ [-Wunused-variable]
+   28 |         double dK, K1, T, MU, swap, px, pz, Ylm, norm_fact,mu_1,mu_2,mu_3,ff,beta;
+      |                                                            ^~~~
+calpow_mom.c:28:50: warning: unused variable ‘norm_fact’ [-Wunused-variable]
+   28 |         double dK, K1, T, MU, swap, px, pz, Ylm, norm_fact,mu_1,mu_2,mu_3,ff,beta;
+      |                                                  ^~~~~~~~~
+calpow_mom.c:28:45: warning: unused variable ‘Ylm’ [-Wunused-variable]
+   28 |         double dK, K1, T, MU, swap, px, pz, Ylm, norm_fact,mu_1,mu_2,mu_3,ff,beta;
+      |                                             ^~~
+calpow_mom.c:28:41: warning: unused variable ‘pz’ [-Wunused-variable]
+   28 |         double dK, K1, T, MU, swap, px, pz, Ylm, norm_fact,mu_1,mu_2,mu_3,ff,beta;
+      |                                         ^~
+calpow_mom.c:28:37: warning: unused variable ‘px’ [-Wunused-variable]
+   28 |         double dK, K1, T, MU, swap, px, pz, Ylm, norm_fact,mu_1,mu_2,mu_3,ff,beta;
+      |                                     ^~
+calpow_mom.c:28:31: warning: unused variable ‘swap’ [-Wunused-variable]
+   28 |         double dK, K1, T, MU, swap, px, pz, Ylm, norm_fact,mu_1,mu_2,mu_3,ff,beta;
+      |                               ^~~~
+calpow_mom.c:28:27: warning: unused variable ‘MU’ [-Wunused-variable]
+   28 |         double dK, K1, T, MU, swap, px, pz, Ylm, norm_fact,mu_1,mu_2,mu_3,ff,beta;
+      |                           ^~
+calpow_mom.c:28:24: warning: unused variable ‘T’ [-Wunused-variable]
+   28 |         double dK, K1, T, MU, swap, px, pz, Ylm, norm_fact,mu_1,mu_2,mu_3,ff,beta;
+      |                        ^
+calpow_mom.c:28:20: warning: unused variable ‘K1’ [-Wunused-variable]
+   28 |         double dK, K1, T, MU, swap, px, pz, Ylm, norm_fact,mu_1,mu_2,mu_3,ff,beta;
+      |                    ^~
+calpow_mom.c:28:16: warning: unused variable ‘dK’ [-Wunused-variable]
+   28 |         double dK, K1, T, MU, swap, px, pz, Ylm, norm_fact,mu_1,mu_2,mu_3,ff,beta;
+      |                ^~
+calpow_mom.c:77:17: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   77 |                 fread(&ro[i][j][k],sizeof(double),1,fp1); }
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+funcs.c: In function ‘read_field’:
+funcs.c:271:17: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  271 |                 fread(&ro[i][j][k],sizeof(double),1,fp1); }
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+funcs.c: In function ‘fill_sd’:
+funcs.c:290:5: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  290 |     fread(buffer1, sizeof(double), 2 * NN*NN, drfile1);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+funcs.c: In function ‘read_rings’:
+funcs.c:436:1: warning: ignoring return value of ‘fscanf’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  436 | fscanf(file_count, "%d", rcountPtr);
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+funcs.c:449:1: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  449 | fread(*rdataPtr + i * 4 + j, sizeof(double), 1, rfile);}}
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+funcs.c: In function ‘FBI’:
+funcs.c:597:25: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  597 |                         fread(&dummy_data, sizeof(double), 2, drfile1);
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+funcs.c:602:25: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  602 |                         fread(&dummy_data, sizeof(double), 2, drfile2);
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+funcs.c:607:25: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  607 |                         fread(&dummy_data, sizeof(double), 2, drfile3);
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+funcs.c: In function ‘FBI_fast’:
+funcs.c:660:17: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  660 |                 fread(buffer1, sizeof(double), 2 * NN*NN, drfile1);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+funcs.c:661:17: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  661 |                 fread(buffer2, sizeof(double), 2 * NN*NN, drfile2);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+funcs.c:662:17: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  662 |                 fread(buffer3, sizeof(double), 2 * NN*NN, drfile3);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+funcs.c: In function ‘FBI_fast_old’:
+funcs.c:813:17: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  813 |                 fread(buffer1, sizeof(double), 2 * NN*NN, drfile1);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+funcs.c:814:17: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  814 |                 fread(buffer2, sizeof(double), 2 * NN*NN, drfile2);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+funcs.c:815:17: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  815 |                 fread(buffer3, sizeof(double), 2 * NN*NN, drfile3);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

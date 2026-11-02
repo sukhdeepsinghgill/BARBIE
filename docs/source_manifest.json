@@ -1,0 +1,122 @@
+[
+  {
+    "original": "many_fields.sh",
+    "packaged": "many_fields.sh",
+    "original_sha256": "292efa37ac0ec4fbf0e50c00ddfeaecd0526173818b8a4a4ba2f2589f175f975",
+    "packaged_sha256": "292efa37ac0ec4fbf0e50c00ddfeaecd0526173818b8a4a4ba2f2589f175f975"
+  },
+  {
+    "original": "makefile",
+    "packaged": "docs/legacy_makefile.txt",
+    "original_sha256": "0f616b03b6ccfede4b62394046ab3c73f1e0df2725e08be3c31c84cfcd58d41f",
+    "packaged_sha256": "0f616b03b6ccfede4b62394046ab3c73f1e0df2725e08be3c31c84cfcd58d41f"
+  },
+  {
+    "original": "generate_field.c",
+    "packaged": "generate_field.c",
+    "original_sha256": "aacca2054a698eaa9c7cfb24a3d56cd7dccfcfe8b6672eb6f70df192178b81f3",
+    "packaged_sha256": "aacca2054a698eaa9c7cfb24a3d56cd7dccfcfe8b6672eb6f70df192178b81f3"
+  },
+  {
+    "original": "calpow_mom.c",
+    "packaged": "calpow_mom.c",
+    "original_sha256": "a5db5804ff9f41fc54946df577e72cb51eb370a0011844086f6d4eba7a38b38b",
+    "packaged_sha256": "a5db5804ff9f41fc54946df577e72cb51eb370a0011844086f6d4eba7a38b38b"
+  },
+  {
+    "original": "funcs.c",
+    "packaged": "funcs.c",
+    "original_sha256": "8f86be62f463f152ce88e433a41b608d302b8c5cd36b47c530da65ebae6ae17c",
+    "packaged_sha256": "8f86be62f463f152ce88e433a41b608d302b8c5cd36b47c530da65ebae6ae17c"
+  },
+  {
+    "original": "calpow_mom.sh",
+    "packaged": "calpow_mom.sh",
+    "original_sha256": "755fbf56c72973e78b0c39445841019495b7bb33d13f838b0a1025968c48a9cd",
+    "packaged_sha256": "755fbf56c72973e78b0c39445841019495b7bb33d13f838b0a1025968c48a9cd"
+  },
+  {
+    "original": "wrapid.c",
+    "packaged": "wrapid.c",
+    "original_sha256": "25c60665c8fbbe155c9245eacb98cca7cedd64ee7d0620e099346ff272cf8381",
+    "packaged_sha256": "25c60665c8fbbe155c9245eacb98cca7cedd64ee7d0620e099346ff272cf8381"
+  },
+  {
+    "original": "serial1.sh",
+    "packaged": "serial1.sh",
+    "original_sha256": "c6ccde10540f64e440519a0324d62cbd22f1efb4798601cb78681a58b5b6e1f1",
+    "packaged_sha256": "c6ccde10540f64e440519a0324d62cbd22f1efb4798601cb78681a58b5b6e1f1"
+  },
+  {
+    "original": "submit_jobs.sh",
+    "packaged": "submit_jobs.sh",
+    "original_sha256": "b63ea74c3bea264bd759faaff4adba668dff66ff1b32e7573b92bd135100e368",
+    "packaged_sha256": "b63ea74c3bea264bd759faaff4adba668dff66ff1b32e7573b92bd135100e368"
+  },
+  {
+    "original": "ngrf_2d_funcs.c",
+    "packaged": "ngrf_2d_funcs.c",
+    "original_sha256": "aed5102d949c5c85334695059bf9023eccafef697f0585b812603d8efc84c593",
+    "packaged_sha256": "aed5102d949c5c85334695059bf9023eccafef697f0585b812603d8efc84c593"
+  },
+  {
+    "original": "run",
+    "packaged": "run",
+    "original_sha256": "c7d7851f95a0d230245c63573b5bf31158c4e766c89d292a02c225b97ab94685",
+    "packaged_sha256": "c7d7851f95a0d230245c63573b5bf31158c4e766c89d292a02c225b97ab94685"
+  },
+  {
+    "original": "mpi.sh",
+    "packaged": "mpi.sh",
+    "original_sha256": "b06c163d4f8002ae903e35a2f79058008d31bd18469976be7e2b8b581f50932b",
+    "packaged_sha256": "b06c163d4f8002ae903e35a2f79058008d31bd18469976be7e2b8b581f50932b"
+  },
+  {
+    "original": "barbie.c",
+    "packaged": "barbie.c",
+    "original_sha256": "86f1c8798e5dde3c441a47973faac45846d87a6aebebacc3afb23ffa1cbe5b9c",
+    "packaged_sha256": "86f1c8798e5dde3c441a47973faac45846d87a6aebebacc3afb23ffa1cbe5b9c"
+  },
+  {
+    "original": "Other_Versions/zBS_v3_mpi.c",
+    "packaged": "Other_Versions/zBS_v3_mpi.c",
+    "original_sha256": "3c7852ea6f65240e22d1d9249126704f9c8edfb2199dcafab0442066b114f5eb",
+    "packaged_sha256": "3c7852ea6f65240e22d1d9249126704f9c8edfb2199dcafab0442066b114f5eb"
+  },
+  {
+    "original": "Other_Versions/zBS_fast_mpi_old.c",
+    "packaged": "Other_Versions/zBS_fast_mpi_old.c",
+    "original_sha256": "a3c30f6839250946d3406c8e23ddf0127670e1935ed2a688726fd02438acb711",
+    "packaged_sha256": "a3c30f6839250946d3406c8e23ddf0127670e1935ed2a688726fd02438acb711"
+  },
+  {
+    "original": "Other_Versions/zBS_v3_mpi_old.c",
+    "packaged": "Other_Versions/zBS_v3_mpi_old.c",
+    "original_sha256": "2f91b8c080cdb36860db7216e25124a2896b258c58e6510697d5248760e96b73",
+    "packaged_sha256": "2f91b8c080cdb36860db7216e25124a2896b258c58e6510697d5248760e96b73"
+  },
+  {
+    "original": "Other_Versions/zBS_v2_mpi.c",
+    "packaged": "Other_Versions/zBS_v2_mpi.c",
+    "original_sha256": "ef512f2ef51d4dbb11731c13fb47bfbc860d145004d2ae61812404ceea4081c0",
+    "packaged_sha256": "ef512f2ef51d4dbb11731c13fb47bfbc860d145004d2ae61812404ceea4081c0"
+  },
+  {
+    "original": "Other_Versions/zBS_v3.c",
+    "packaged": "Other_Versions/zBS_v3.c",
+    "original_sha256": "6bacd1510f66b79f5c2515d5240aad18bab2459b34319aa7c177d1fe248cf9f9",
+    "packaged_sha256": "6bacd1510f66b79f5c2515d5240aad18bab2459b34319aa7c177d1fe248cf9f9"
+  },
+  {
+    "original": "Other_Versions/zBS_fast_mpi.c",
+    "packaged": "Other_Versions/zBS_fast_mpi.c",
+    "original_sha256": "a3300a5a1f8e651b06cb9320d37477ac0102cb0953848624b15d4a9c349da8c0",
+    "packaged_sha256": "a3300a5a1f8e651b06cb9320d37477ac0102cb0953848624b15d4a9c349da8c0"
+  },
+  {
+    "original": "Other_Versions/zBS_fast.c",
+    "packaged": "Other_Versions/zBS_fast.c",
+    "original_sha256": "0343fcaf7df2bbe3ee9efb3ed7dbc5f4c2d9e51c8619b7cd6eac9405b71d6f97",
+    "packaged_sha256": "0343fcaf7df2bbe3ee9efb3ed7dbc5f4c2d9e51c8619b7cd6eac9405b71d6f97"
+  }
+]
