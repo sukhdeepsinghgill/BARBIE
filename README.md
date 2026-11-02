@@ -1,5 +1,6 @@
 # BARBIE
-### Brisk estimation of redshift-space bispectrum multipoles
+## Brisk estimator for Angular multipoles of Redshift space BIspEctrum. 
+### It takes the 3D cube of galaxy field and computes the all multipole moments of redshift space bispectrum. The redshift space distortion is assumed to be in z direction.
 
 [Paper](https://doi.org/10.1103/PhysRevD.111.043507) · [arXiv](https://arxiv.org/abs/2405.14513) · [Installation](docs/INSTALL.md) · [Code review](docs/REVIEW.md)
 
